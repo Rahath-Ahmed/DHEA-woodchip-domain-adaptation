@@ -1,0 +1,153 @@
+# TransAdapter — commands for all 6 source-target combinations
+# Original TransAdapter repo: https://github.com/enesdoruk/TransAdapter
+#
+# Same hyperparameters used for every run; only --dataset and --output_dir change
+# across the 6 source-target combinations.
+
+conda activate torch_blackwell
+cd /d D:\Woodchip_moisture_content\Transadapter
+set WANDB_MODE=disabled
+
+REM --- Combo 1: Source 1 -> Target 2 ---
+python -u train_transadapter.py ^
+--name woodchip_run ^
+--wandb_name woodchip_run ^
+--dataset office_1_2 ^
+--source_list source_list.txt ^
+--target_list target_list.txt ^
+--test_list_source source_list.txt ^
+--test_list_target test_list_target.txt ^
+--num_classes 3 ^
+--train_batch_size 16 ^
+--eval_batch_size 16 ^
+--num_steps 7000 ^
+--learning_rate 0.01 ^
+--momentum 0.9 ^
+--weight_decay 0.001 ^
+--gamma 0.1 ^
+--beta 0.01 ^
+--theta 0.0001 ^
+--pseudo_lab True ^
+--seed 42 ^
+--pretrained_dir checkpoints/swin_base_patch4_window7_224_22k.pth ^
+--output_dir woodchip_results_1_2
+
+REM --- Combo 2: Source 2 -> Target 1 ---
+python -u train_transadapter.py ^
+--name woodchip_run ^
+--wandb_name woodchip_run ^
+--dataset office_2_1 ^
+--source_list source_list.txt ^
+--target_list target_list.txt ^
+--test_list_source source_list.txt ^
+--test_list_target test_list_target.txt ^
+--num_classes 3 ^
+--train_batch_size 16 ^
+--eval_batch_size 16 ^
+--num_steps 7000 ^
+--learning_rate 0.01 ^
+--momentum 0.9 ^
+--weight_decay 0.001 ^
+--gamma 0.1 ^
+--beta 0.01 ^
+--theta 0.0001 ^
+--pseudo_lab True ^
+--seed 42 ^
+--pretrained_dir checkpoints/swin_base_patch4_window7_224_22k.pth ^
+--output_dir woodchip_results_2_1
+
+REM --- Combo 3: Source 1 -> Target 3 ---
+python -u train_transadapter.py ^
+--name woodchip_run ^
+--wandb_name woodchip_run ^
+--dataset office_1_3 ^
+--source_list source_list.txt ^
+--target_list target_list.txt ^
+--test_list_source source_list.txt ^
+--test_list_target test_list_target.txt ^
+--num_classes 3 ^
+--train_batch_size 16 ^
+--eval_batch_size 16 ^
+--num_steps 7000 ^
+--learning_rate 0.01 ^
+--momentum 0.9 ^
+--weight_decay 0.001 ^
+--gamma 0.1 ^
+--beta 0.01 ^
+--theta 0.0001 ^
+--pseudo_lab True ^
+--seed 42 ^
+--pretrained_dir checkpoints/swin_base_patch4_window7_224_22k.pth ^
+--output_dir woodchip_results_1_3
+
+REM --- Combo 4: Source 3 -> Target 1 ---
+python -u train_transadapter.py ^
+--name woodchip_run ^
+--wandb_name woodchip_run ^
+--dataset office_3_1 ^
+--source_list source_list.txt ^
+--target_list target_list.txt ^
+--test_list_source source_list.txt ^
+--test_list_target test_list_target.txt ^
+--num_classes 3 ^
+--train_batch_size 16 ^
+--eval_batch_size 16 ^
+--num_steps 7000 ^
+--learning_rate 0.01 ^
+--momentum 0.9 ^
+--weight_decay 0.001 ^
+--gamma 0.1 ^
+--beta 0.01 ^
+--theta 0.0001 ^
+--pseudo_lab True ^
+--seed 42 ^
+--pretrained_dir checkpoints/swin_base_patch4_window7_224_22k.pth ^
+--output_dir woodchip_results_3_1
+
+REM --- Combo 5: Source 2 -> Target 3 ---
+python -u train_transadapter.py ^
+--name woodchip_run ^
+--wandb_name woodchip_run ^
+--dataset office_2_3 ^
+--source_list source_list.txt ^
+--target_list target_list.txt ^
+--test_list_source source_list.txt ^
+--test_list_target test_list_target.txt ^
+--num_classes 3 ^
+--train_batch_size 16 ^
+--eval_batch_size 16 ^
+--num_steps 7000 ^
+--learning_rate 0.01 ^
+--momentum 0.9 ^
+--weight_decay 0.001 ^
+--gamma 0.1 ^
+--beta 0.01 ^
+--theta 0.0001 ^
+--pseudo_lab True ^
+--seed 42 ^
+--pretrained_dir checkpoints/swin_base_patch4_window7_224_22k.pth ^
+--output_dir woodchip_results_2_3
+
+REM --- Combo 6: Source 3 -> Target 2 ---
+python -u train_transadapter.py ^
+--name woodchip_run ^
+--wandb_name woodchip_run ^
+--dataset office_3_2 ^
+--source_list source_list.txt ^
+--target_list target_list.txt ^
+--test_list_source source_list.txt ^
+--test_list_target test_list_target.txt ^
+--num_classes 3 ^
+--train_batch_size 16 ^
+--eval_batch_size 16 ^
+--num_steps 7000 ^
+--learning_rate 0.01 ^
+--momentum 0.9 ^
+--weight_decay 0.001 ^
+--gamma 0.1 ^
+--beta 0.01 ^
+--theta 0.0001 ^
+--pseudo_lab True ^
+--seed 42 ^
+--pretrained_dir checkpoints/swin_base_patch4_window7_224_22k.pth ^
+--output_dir woodchip_results_3_2
