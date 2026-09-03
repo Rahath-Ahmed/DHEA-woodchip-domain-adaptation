@@ -61,8 +61,7 @@ repository but can be made available from the corresponding author upon reasonab
 
 Each notebook or script under `dhea/` and `baselines/` corresponds to one
 source-target combination and can be run independently. All experiments
-share the same three-class label set (Dry, Medium, Wet) and the same data
-splits, defined in `datasets/`.
+share the same three-class label set (Dry, Medium, Wet), defined in `datasets/`.
 
 ## Results
 
