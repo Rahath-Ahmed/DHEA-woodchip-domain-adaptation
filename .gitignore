@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ------------------------------------------------------------
+# Project-specific: trained weights and generated run outputs
+# (these are outputs of running the code, not code themselves,
+# and should not be committed to the repository)
+# ------------------------------------------------------------
+*.pth
+*.pt
+*.npy
+best_checkpoint*
