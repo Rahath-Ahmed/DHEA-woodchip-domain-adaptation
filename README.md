@@ -81,7 +81,7 @@ comparisons are reported in the paper.
 If you use this code, please cite our paper:
 
 ```
-[Add citation once the paper is published, e.g. BibTeX entry]
+[Will add after publication]
 ```
 
 ## License
@@ -96,4 +96,4 @@ This work was supported by the Louisiana Board of Regents.
 ## Contact
 
 For questions about this code, please open an issue on this repository or
-contact [add your email address].
+contact rah350@latech.edu.
