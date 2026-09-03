@@ -17,14 +17,19 @@ a checkpoint within 1.75% of the best result, closer than three other proxies. T
 
 ```
 .
-├── dhea/               DHEA model and training code, one notebook per source-target combination (1_2, 2_1, 1_3, 3_1, 2_3, 3_2)
+├── dhea/              DHEA model and training code, one notebook per
+│                       source-target combination (1_2, 2_1, 1_3, 3_1, 2_3, 3_2)
 ├── baselines/
 │   ├── source_only/    Source-only baseline (no adaptation), all 6 combinations
-│   ├── adapt_library/  DANN, ADDA, CDAN, MDD, DeepCORAL baselines, built on the Adapt library, all 6 combinations each                   
-│   ├── sdat/           CDAN+SDAT baseline, all 6 combinations. Depends on the original SDAT repository (see baselines/sdat/README.md)
-│   └── transadapter/   Commands used to run the original TransAdapter implementation on all 6 combinations (see
+│   ├── adapt_library/  DANN, ADDA, CDAN, MDD, DeepCORAL baselines, built on
+│   │                   the Adapt library, all 6 combinations each
+│   ├── sdat/           CDAN+SDAT baseline, all 6 combinations. Depends on the
+│   │                   original SDAT repository (see baselines/sdat/README.md)
+│   └── transadapter/   Commands used to run the original TransAdapter
+│                       implementation on all 6 combinations (see
 │                       baselines/transadapter/README.md)
-├── proxy_metrics/      Comparison of UDA Score against other checkpoint selection proxies
+├── proxy_metrics/      Comparison of UDA Score against other checkpoint
+│                       selection proxies
 ├── ablation/           Ablation study on DHEA's loss components
 ├── datasets/           Dataset loading code, shared across all experiments
 ├── LICENSE
