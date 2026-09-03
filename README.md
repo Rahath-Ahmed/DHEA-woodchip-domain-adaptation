@@ -9,30 +9,29 @@ selecting the best training checkpoint without access to target labels.
 
 ## Abstract
 
-Wood chips are raw material in industries such as pelleting mills,
-bio-refineries, and paper mills, where moisture content affects cost and
-quality. The standard method, oven-drying, takes hours, too slow for
-real-time decisions. Studies have shown machine learning models can
-estimate moisture from images faster, but a model trained on one source
-performs poorly on another due to differences in lighting, shape, and
-texture, a problem called domain shift. Labeling every new source is
-impractical, since each label needs oven-drying. Unsupervised domain
-adaptation (UDA) addresses this, letting a model trained on a labeled
-source work on an unlabeled one. However, adversarial UDA methods discard
-domain-specific information instead of using it, a gap this study
-addresses. We propose DHEA (Dual-Head Encoder Adaptation), a dual-encoder
-network that predicts wood chip moisture classes in an unseen target
-domain without drastically sacrificing accuracy. DHEA uses a Common
-Encoder, which suppresses domain information to classify moisture using
-domain-invariant features, and a Hetero Encoder, which captures that
-discarded signal, easing pressure on the Common Encoder. Since target
-labels are never available in UDA, there is no way to pick the best
+Wood chips are raw material in industries such as pelleting mills, bio-
+refineries, and paper mills, where moisture content affects cost and quality.
+The standard method, oven-drying, takes hours, too slow for real-time deci-
+sions. Studies have shown machine learning models can estimate moisture
+from images faster, but a model trained on one source performs poorly on
+another due to differences in lighting, shape, and texture, a problem called
+domain shift. Labeling every new source is impractical, since each label
+needs oven-drying. Unsupervised domain adaptation (UDA) addresses this,
+letting a model trained on a labeled source work on an unlabeled one. How-
+ever, adversarial UDA methods discard domain-specific information instead
+of using it, a gap this study addresses. We propose DHEA (Dual-Head
+Encoder Adaptation), a dual-encoder network that predicts wood chip mois-
+ture classes in an unseen target domain without sacrificing accuracy. DHEA
+uses a Common Encoder, which suppresses domain information to classify
+moisture using domain-invarient features, and a Hetero Encoder, which cap-
+tures that discarded signal, easing pressure on the Common Encoder. Since
+target labels are never available in UDA, there is no way to pick the best
 checkpoint; we propose UDA Score, a label-free checkpoint-selection proxy.
 DHEA beats eight baselines across six source-target pairs, reaching 74.8%
 target accuracy, nearly 13 points above the best baseline. UDA Score picks
-a checkpoint within 1.75% of the best result, closer than three other
-proxies. These results suggest preserving domain-specific information,
-rather than discarding it, is a promising direction for domain adaptation.
+a checkpoint within 1.75% of the best result, closer than three other proxies.
+These results suggest preserving domain-specific information, rather than
+discarding it, is a promising direction for domain adaptation.
 
 ## Repository Structure
 
@@ -76,8 +75,7 @@ the README files inside their respective folders for setup instructions.
 ## Dataset
 
 The wood chip moisture dataset used in this work is not included in this
-repository. [Add a sentence here on how others can request or access the
-dataset, or a link if it is publicly hosted elsewhere.]
+repository but can be made available from the corresponding author upon reasonable request.
 
 ## Running the Code
 
