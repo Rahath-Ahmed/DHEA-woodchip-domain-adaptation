@@ -1,4 +1,4 @@
-# DHEA: Dual-Head Encoder Adaptation for Wood Chip Moisture Classification
+# DHEA: Dual-Head Encoder Adaptation for Wood Chip Moisture Assessment
 
 This repository contains the official code for our paper, "DHEA (Dual-Head
 Encoder Adaptation): A Dual-Encoder Domain Adaptation Network for Wood Chip
