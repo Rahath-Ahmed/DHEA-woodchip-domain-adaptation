@@ -17,7 +17,7 @@ a checkpoint within 1.75% of the best result, closer than three other proxies. T
 
 ```
 .
-├── dhea/              DHEA model and training code, one notebook per
+├── dhea/               DHEA model and training code, one notebook per
 │                       source-target combination (1_2, 2_1, 1_3, 3_1, 2_3, 3_2)
 ├── baselines/
 │   ├── source_only/    Source-only baseline (no adaptation), all 6 combinations
